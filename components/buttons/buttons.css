@@ -1,0 +1,92 @@
+@import url(./../../styles/colors/colors.css);
+@import url(./../cards/cards.css);
+@import url(./../../styles/shapes/shapes.css);
+@import url(./../../styles/elevation/elevation.css);
+@import url(./../icons/icons.css);
+
+* {
+    list-style: none;
+}
+
+body {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 50%;
+}
+
+.buttons-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1em;
+}
+
+.button {
+    padding: 1em 2em;
+    border-radius: 6.25em;
+}
+
+.button.icon {
+    border-radius: var(--shape-circle);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.button.icon .button-label {
+    display: block;
+}
+
+.button.icon.svg {
+    display: block;
+}
+
+.button.icon path {
+    fill: currentColor;
+}
+
+.filled {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border: none;
+}
+
+.outlined {
+    background-color: var(--color-surface-outline);
+    color: 1px solid var(--color-primary);
+    border: 1px solid var(--color-outline);
+}
+
+.text {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: none
+}
+
+.button-state-layer {
+    background-color: currentColor;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: inherit;
+    transition: .2s linear opacity;
+}
+
+.button-label {
+    position: relative;
+}
+
+.button.filled:hover:not(:disabled),
+.button.filled.hovered:not(:disabled) {
+    box-shadow: var(--elevation-0);
+}
+
+.button.filled:hover:not(:disabled) .button-state-layer,
+.button.filled.hovered:not(:disabled) .button-state-layer {}

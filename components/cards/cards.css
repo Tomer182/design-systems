@@ -1,0 +1,35 @@
+@import url(./../../styles/colors/colors.css);
+@import url(./../buttons/buttons.css);
+@import url(./../../styles/shapes/shapes.css);
+@import url(./../../styles/elevation/elevation.css);
+@import url(./../icons/icons.css);
+
+.card {
+    border-radius: var(--shape-medium);
+    padding: 1em;
+}
+
+.card.outlined {
+    border: 1px solid var(--color-outline);
+}
+
+
+.card .avatar img {
+    border-radius: 50%;
+    max-height: 4em;
+}
+
+.card .card_media {
+    padding: 1em 0;
+}
+
+.card .card_media img {
+    display: block;
+    max-width: 100%;
+}
+
+.card>header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}

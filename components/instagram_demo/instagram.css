@@ -1,0 +1,38 @@
+@import url(./../../styles/colors/colors.css);
+@import url(./../buttons/buttons.css);
+@import url(./../cards/cards.css);
+@import url(./../../styles/shapes/shapes.css);
+@import url(./../../styles/elevation/elevation.css);
+@import url(./../icons/icons.css);
+
+body {
+    font-family: 'Lato', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', 'sans-serif';
+}
+
+.feed {
+    margin: 1em;
+    max-width: 35em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.feed>* {
+    margin bottom: 1em;
+    width: 100%;
+}
+
+.feed .card-media img {
+    width: 100%;
+}
+
+.action_list ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.5em;
+}
+
+.action_list {
+    display: flex;
+    justify-content: space-between;
+}
